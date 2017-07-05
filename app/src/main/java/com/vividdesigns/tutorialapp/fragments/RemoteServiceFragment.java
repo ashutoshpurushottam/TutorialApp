@@ -87,6 +87,7 @@ public class RemoteServiceFragment extends Fragment {
     }
 
     private void sendMessage() {
+        if(!isBound) return;
 
         String randomString = getRandomString();
 

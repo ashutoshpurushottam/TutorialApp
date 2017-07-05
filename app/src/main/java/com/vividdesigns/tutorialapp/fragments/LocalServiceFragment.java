@@ -82,8 +82,10 @@ public class LocalServiceFragment extends Fragment {
      * Get random number from the service and display it
      */
     private void  getRandomNumber() {
-        int randomNumber = myService.getRandomNumber();
-        randomTextView.setText(String.valueOf(randomNumber));
+        if(isBound) {
+            int randomNumber = myService.getRandomNumber();
+            randomTextView.setText(String.valueOf(randomNumber));
+        }
     }
 
     @Override
