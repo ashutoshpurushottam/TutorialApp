@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_local"
+        android:enabled="true"
+        android:icon="@drawable/icn_local"
+        android:title="@string/local"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_remote"
+        android:enabled="true"
+        android:icon="@drawable/icn_remote"
+        android:title="@string/remote"
+        app:showAsAction="ifRoom" />
+</menu>

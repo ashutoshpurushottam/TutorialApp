@@ -1,0 +1,13 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="std_padding">16dp</dimen>
+    <dimen name="std_margin">16dp</dimen>
+    <dimen name="small_padding">8dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="tiny_margin">4dp</dimen>
+    <dimen name="tiny_padding">4dp</dimen>
+    <dimen name="radio_button_height">36dp</dimen>
+    <dimen name="big_margin">32dp</dimen>
+    <dimen name="line_height">2dp</dimen>
+    <dimen name="radio_button_text_size">12sp</dimen>
+</resources>

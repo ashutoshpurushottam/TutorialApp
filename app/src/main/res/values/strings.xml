@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TutorialApp</string>
+    <string name="local">Local</string>
+    <string name="remote">Remote</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="get_random_number">GET RANDOM NUMBER</string>
+    <string name="remote_service">Remote Service</string>
+    <string name="hit_button_to_get_random_number">Hit Button To Get Random Number</string>
+    <string name="send_message">Send Message</string>
+    <string name="get_string">Hit button to get a random string from the remote service</string>
+</resources>
