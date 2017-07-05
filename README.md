@@ -1,0 +1,1 @@
+This is a small application developed to demonstrate implementation of Local Bound Service and Remote Bound Service (two-way communication). This is a demo application and the implementation is not standard. However, you are free to use and modify the code as per your requirement.
