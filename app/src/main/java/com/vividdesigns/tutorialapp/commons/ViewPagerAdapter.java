@@ -9,7 +9,7 @@ import com.vividdesigns.tutorialapp.fragments.LocalServiceFragment;
 import com.vividdesigns.tutorialapp.fragments.RemoteServiceFragment;
 
 /**
- * Created by Ashutosh Purushottam on 04/07/17.
+ * Viewpager class showing two fragments for the Local and Remote services
  */
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {

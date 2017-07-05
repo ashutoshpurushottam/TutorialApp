@@ -5,10 +5,21 @@
     tools:context="com.vividdesigns.tutorialapp.fragments.RemoteServiceFragment">
 
     <TextView
+        android:id="@+id/remote_message_tv"
+        android:layout_marginTop="@dimen/std_margin"
+        android:text="@string/remote_service_msg"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="@dimen/big_margin"
+        android:layout_below="@+id/remote_message_tv"
         android:id="@+id/remote_string_tv"
         android:text="@string/get_string"
         android:gravity="center_horizontal"
-        android:textSize="20sp"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-condensed"
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -17,7 +28,7 @@
 
     <Button
         android:id="@+id/message_btn"
-        android:text="@string/send_message"
+        android:text="@string/get_random_string"
         style="@style/BottomBarButton"
         android:background="@color/colorPrimary"
         android:layout_alignParentBottom="true"

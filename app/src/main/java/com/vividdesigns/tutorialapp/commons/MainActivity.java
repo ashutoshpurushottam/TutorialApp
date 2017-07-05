@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Set up ViewPager for the fragments
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         mViewPager = (ViewPager)findViewById(R.id.viewpager);
@@ -34,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
         setUpViewPager();
     }
 
+    /**
+     * Method to setup view pager to the activity
+     */
     private void setUpViewPager() {
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), this);
         mViewPager.setAdapter(viewPagerAdapter);

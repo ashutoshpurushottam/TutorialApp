@@ -9,29 +9,33 @@ import android.os.Message;
 import android.os.Messenger;
 import android.support.annotation.Nullable;
 import android.util.Log;
-import android.view.Gravity;
-import android.widget.Toast;
 
 public class RemoteService extends Service {
 
     private static final String LOG_TAG = RemoteService.class.getSimpleName();
-    public static final int STRIP_STRING = 13;
+
+    // codes for the client-server communication (IPC)
+
+    public static final int STRIP_STRING_REQUEST = 13;
     public static final int STRIP_STRING_RESPONSE = 17;
 
     private final Messenger myMessenger = new Messenger(new IncomingHandler());
 
 
-    static class IncomingHandler extends Handler {
+    private static class IncomingHandler extends Handler {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
-                case STRIP_STRING: {
+                case STRIP_STRING_REQUEST: {
                     try {
                         Bundle data = msg.getData();
 
+                        // Get the string from the client and strip all non-alpha characters
+                        // convert the whole string to lowercase
                         String obtainedString = data.getString("random");
-
                         String responseString = stripNonAlpha(obtainedString);
+
+                        // Send the stripped string back to client
                         Message resp = Message.obtain(null, STRIP_STRING_RESPONSE);
                         Bundle bundle = new Bundle();
                         bundle.putString("strippedString", responseString);
@@ -47,6 +51,10 @@ public class RemoteService extends Service {
         }
     }
 
+    /**
+     * Helper method which strips all non-alpha characters from the string
+     * and converts the whole string to lowercase.
+     */
     private static String stripNonAlpha(String s) {
         return s.replaceAll("[^A-Za-z]", "").toLowerCase();
     }

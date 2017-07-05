@@ -8,6 +8,8 @@
     <string name="get_random_number">GET RANDOM NUMBER</string>
     <string name="remote_service">Remote Service</string>
     <string name="hit_button_to_get_random_number">Hit Button To Get Random Number</string>
-    <string name="send_message">Send Message</string>
+    <string name="get_random_string">Get Random String</string>
     <string name="get_string">Hit button to get a random string from the remote service</string>
+    <string name="local_service_msg">Demonstration of Local Bound Service. The service returns a random integer to the client which is displayed below in the TextView.</string>
+    <string name="remote_service_msg">Demonstration of the Remote Bound Service. The Client provides the service a random string, which is processed by the Remote service and stripped of all non-alpha characters and returned to the client which is disaplyed below.</string>
 </resources>

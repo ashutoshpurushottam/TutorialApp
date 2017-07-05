@@ -5,21 +5,32 @@
     tools:context="com.vividdesigns.tutorialapp.fragments.LocalServiceFragment">
 
     <TextView
+        android:layout_marginTop="@dimen/std_margin"
+        android:id="@+id/local_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/local_service_msg" />
+
+    <TextView
         android:id="@+id/random_tv"
-        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/local_message"
+        android:layout_marginTop="@dimen/big_margin"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_horizontal"
         android:text="@string/hit_button_to_get_random_number"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/random_btn"
-        android:text="@string/get_random_number"
         style="@style/BottomBarButton"
-        android:background="@color/colorPrimary"
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:text="@string/get_random_number" />
 
 
 </RelativeLayout>

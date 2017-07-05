@@ -7,7 +7,7 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 
 /**
- * Created by Ashutosh Purushottam on 04/07/17.
+ * Local Service which returns a random number to its client
  */
 
 public class BoundService extends Service {

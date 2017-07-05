@@ -22,8 +22,11 @@ import com.vividdesigns.tutorialapp.service.BoundService;
  */
 public class LocalServiceFragment extends Fragment {
 
+    // instance of the bound service used
     BoundService myService;
     boolean isBound = false;
+
+    // ui elements
     private TextView randomTextView;
     private Button randomButton;
 
@@ -32,7 +35,6 @@ public class LocalServiceFragment extends Fragment {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             BoundService.MyLocalBinder binder = (BoundService.MyLocalBinder) service;
-            // initialize BoundService
             myService = binder.getService();
             isBound = true;
         }
@@ -51,6 +53,7 @@ public class LocalServiceFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        // bind to the service when fragment is active
         Intent intent = new Intent(getActivity(), BoundService.class);
         getActivity().bindService(intent, myServiceConnection, Context.BIND_AUTO_CREATE);
     }
@@ -75,6 +78,9 @@ public class LocalServiceFragment extends Fragment {
         });
     }
 
+    /**
+     * Get random number from the service and display it
+     */
     private void  getRandomNumber() {
         int randomNumber = myService.getRandomNumber();
         randomTextView.setText(String.valueOf(randomNumber));
@@ -83,6 +89,7 @@ public class LocalServiceFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
+        // unbind from the service when fragment pauses
         getActivity().unbindService(myServiceConnection);
     }
 
